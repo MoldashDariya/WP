@@ -1,0 +1,18 @@
+<div class="test-drive-booking">
+  <h1 class="booking-header">Schedule a Test Drive</h1>
+  <form (ngSubmit)="submitBooking()">
+    <div class="form-group">
+      <label for="vehicleModel">Vehicle Model</label>
+      <input type="text" id="vehicleModel" name="vehicleModel" [(ngModel)]="bookingDetails.vehicleModel" required>
+    </div>
+    <div class="form-group">
+      <label for="testDriveDate">Date</label>
+      <input type="date" id="testDriveDate" name="testDriveDate" [(ngModel)]="bookingDetails.date" required>
+    </div>
+    <div class="form-group">
+      <label for="testDriveTime">Time</label>
+      <input type="time" id="testDriveTime" name="testDriveTime" [(ngModel)]="bookingDetails.time" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Book Now</button>
+  </form>
+</div>

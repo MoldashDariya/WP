@@ -1,0 +1,14 @@
+<app-top-bar></app-top-bar>
+
+<div class="product-wrapper">
+  <div class="product-item" *ngFor="let vehicle of sedanVehicles">
+    <img id="vehicle-image" src="{{vehicle.imageUrl}}">
+    <h3>
+      <a [title]="vehicle.model + ' details'" [routerLink]="['/vehicles', vehicle.id]">
+        {{ vehicle.model }}
+      </a>
+    </h3>
+    <p *ngIf="vehicle.description">{{ vehicle.description }}</p>
+    <p id="price">Price: ${{ vehicle.price }}</p>
+  </div>
+</div>

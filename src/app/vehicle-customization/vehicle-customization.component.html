@@ -1,0 +1,15 @@
+<div class="customization-block">
+    <h1 class="customization-title">Vehicle Customization Options</h1>
+
+    <div class="customization-container">
+      <div *ngFor="let option of options" class="customization-item">
+        <a [routerLink]="['/customization', option.id]">
+          <div class="image-container">
+            <img [src]="option.imageUrl" [alt]="option.name" class="customization-image">
+            <span class="customization-name">{{ option.name }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+</div>

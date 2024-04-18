@@ -1,0 +1,19 @@
+<div class="vehicle-detail-block">
+    <h1 class="vehicle-detail-title">{{ vehicle.model }} Details</h1>
+
+    <div class="vehicle-info-container">
+        <div class="vehicle-info-item">
+            <h2>Overview</h2>
+            <img [src]="vehicle.imageUrl" [alt]="vehicle.model" class="vehicle-image">
+            <p><strong>Make:</strong> {{ vehicle.make }}</p>
+            <p><strong>Model:</strong> {{ vehicle.model }}</p>
+            <p><strong>Year:</strong> {{ vehicle.year }}</p>
+            <p><strong>Price:</strong> ${{ vehicle.price }}</p>
+        </div>
+
+        <div class="vehicle-description">
+            <h2>Description</h2>
+            <p>{{ vehicle.description }}</p>
+        </div>
+    </div>
+</div>

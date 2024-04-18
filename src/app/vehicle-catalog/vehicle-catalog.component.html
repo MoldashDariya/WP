@@ -1,0 +1,15 @@
+<div class="vehicle-catalog">
+    <h1 class="catalog-title">Vehicle Catalog</h1>
+
+    <div class="vehicles-container">
+      <div *ngFor="let vehicle of vehicles" class="vehicle-item">
+        <a [routerLink]="['/vehicle', vehicle.id]">
+          <div class="image-container">
+            <img [src]="vehicle.imageUrl" [alt]="vehicle.model" class="vehicle-image">
+            <span class="vehicle-model">{{ vehicle.model }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+</div>
