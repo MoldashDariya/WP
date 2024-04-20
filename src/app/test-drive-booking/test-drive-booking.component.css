@@ -1,4 +1,3 @@
-/* Test Drive Booking Styles */
 .test-drive-booking {
     max-width: 600px;
     margin: 0 auto;
@@ -50,7 +49,6 @@
     background-color: #0056b3;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .test-drive-booking {
         width: 90%;

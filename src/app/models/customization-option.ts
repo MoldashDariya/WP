@@ -1,5 +1,6 @@
 export interface CustomizationOption {
-    id: number;
-    name: string;
-    choices: string[]; // Example property
+  id: number;
+  name: string;
+  imageUrl?: string;
+  choices: string[];
 }

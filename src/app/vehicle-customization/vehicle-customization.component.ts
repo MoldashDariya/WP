@@ -2,19 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
-// Assume a service exists that provides available customization options
 import { CustomizationService } from '../services/customization.service';
+import {TopBarComponent} from "../top-bar/top-bar.component";
 
 @Component({
   selector: 'app-vehicle-customization',
   standalone: true,
-  imports: [RouterModule, FormsModule, CommonModule],
+  imports: [RouterModule, FormsModule, CommonModule, TopBarComponent],
   templateUrl: './vehicle-customization.component.html',
   styleUrls: ['./vehicle-customization.component.css']
 })
 export class VehicleCustomizationComponent implements OnInit {
-  options: any[] = [];  // Define the type based on your data model
+  options: any[] = [];
 
   constructor(private customizationService: CustomizationService) {}
 
@@ -23,7 +22,6 @@ export class VehicleCustomizationComponent implements OnInit {
   }
 
   loadOptions(): void {
-    // This method would call the customizationService to fetch customization options
     this.customizationService.getCustomizationOptions().subscribe({
       next: (data) => {
         this.options = data;

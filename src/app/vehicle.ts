@@ -7,11 +7,6 @@ export interface Vehicle {
     ratingUrl: string;
 }
 
-export interface ShoppingCartItem {
-    vehicle: Vehicle;
-    quantity: number;
-}
-
 export const vehicles: Vehicle[] = [
     {
         id: 1,

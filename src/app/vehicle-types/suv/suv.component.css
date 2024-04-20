@@ -1,20 +1,21 @@
 #vehicle-image {
-  width: 190px;
-  margin-left: 230px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 p {
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .product-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: hidden;
-  background-color: #d8d8d8; /* Example background color */
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
@@ -22,7 +23,8 @@ p {
   width: 48%;
   margin-bottom: 20px;
   margin-top: 20px;
-  border: black 3px solid;
+  border: black 1px solid;
+  border-radius: 10px;
   padding: 10px;
 }
 
@@ -38,12 +40,49 @@ p {
 a {
   text-decoration: none;
   color: #ff6347;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bolder;
 }
 
 #price {
   color: #11722b;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  .product-item {
+    width: 100%;
+  }
+
+  p {
+    margin-right: 2%;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  #price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #vehicle-image {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .product-item {
+    padding: 5px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  #price {
+    font-size: 14px;
+  }
 }

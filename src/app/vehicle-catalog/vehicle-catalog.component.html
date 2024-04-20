@@ -1,5 +1,7 @@
+<app-top-bar *ngIf="isCatalogRoute"></app-top-bar>
+
 <div class="vehicle-catalog">
-    <h1 class="catalog-title">Vehicle Catalog</h1>
+    <h1 class="catalog-title" style="border-top: none;border-bottom: none;">Vehicle Catalog</h1>
 
     <div class="vehicles-container">
       <div *ngFor="let vehicle of vehicles" class="vehicle-item">
@@ -13,3 +15,5 @@
     </div>
 
 </div>
+
+

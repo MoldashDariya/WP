@@ -34,7 +34,7 @@
 }
 
 .vehicle-image {
-    width: auto;
+    width: 400px;
     max-width: 100%;
     height: auto;
     border-radius: 5px;

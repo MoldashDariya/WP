@@ -9,10 +9,20 @@ export class CustomizationService {
   constructor() {}
 
   getCustomizationOptions(): Observable<CustomizationOption[]> {
-    // Mock data for example
-    return of([
-      { id: 1, name: 'Color', choices: ['Red', 'Blue', 'Green'] },
-      { id: 2, name: 'Wheels', choices: ['18 inch', '20 inch'] }
-    ]);
+    const options: CustomizationOption[] = [
+      {
+        id: 1,
+        name: 'Color',
+        choices: ['Red', 'Blue', 'Green'],
+        imageUrl: '../../assets/4p.webp'
+      },
+      {
+        id: 2,
+        name: 'Wheels',
+        choices: ['18 inch', '20 inch'],
+        imageUrl: '../../assets/5p.jpg'
+      }
+    ];
+    return of(options);
   }
 }

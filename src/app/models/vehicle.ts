@@ -1,4 +1,3 @@
-// src/app/models/vehicle.ts
 export interface Vehicle {
   id: number;
   make: string;
@@ -7,4 +6,5 @@ export interface Vehicle {
   price: number;
   description: string;
   imageUrl: string;
+  ratingUrl: string;
 }

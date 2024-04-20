@@ -9,7 +9,6 @@ export class VehicleService {
   constructor() {}
 
   getAllVehicles(): Observable<Vehicle[]> {
-    // Combine all arrays into one and return as an Observable
     const allVehicles = [...vehicles, ...suvs, ...sedans, ...hatchbacks];
     return of(allVehicles);
   }

@@ -6,7 +6,7 @@ import { Vehicle } from '../../vehicle';
 import { TopBarComponent } from "../../top-bar/top-bar.component";
 
 @Component({
-  selector: 'app-hatchback',
+  selector: 'app-suv',
   standalone: true,
   templateUrl: './suv.component.html',
   styleUrls: ['./suv.component.css'],

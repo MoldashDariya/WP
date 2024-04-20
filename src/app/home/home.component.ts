@@ -22,17 +22,4 @@ export class HomeComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    onSubmit(): void {
-        if (this.searchQuery && this.searchQuery.trim() !== '') {
-            // You could use this to navigate to a search results page
-            console.log('Search query:', this.searchQuery);
-            // Navigate to vehicle search results, assuming you have such a route
-            this.router.navigate(['/search', { query: this.searchQuery }]);
-        }
-    }
-
-    navigateToVehicleType(type: string) {
-        // Dynamic navigation based on vehicle type
-        this.router.navigate(['/catalog', type]);
-    }
 }

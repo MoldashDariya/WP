@@ -6,7 +6,7 @@ import { Vehicle } from '../../vehicle';
 import { TopBarComponent } from "../../top-bar/top-bar.component";
 
 @Component({
-  selector: 'app-hatchback',
+  selector: 'app-sedan',
   standalone: true,
   templateUrl: './sedan.component.html',
   styleUrls: ['./sedan.component.css'],
@@ -18,7 +18,7 @@ export class SedanComponent implements OnInit {
   constructor(private vehicleService: VehicleService) { }
 
   ngOnInit(): void {
-    this.sedanVehicles = this.vehicleService.getSedans(); // Method to fetch sedan vehicles
+    this.sedanVehicles = this.vehicleService.getSedans();
   }
 
 }

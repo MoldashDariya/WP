@@ -1,49 +1,88 @@
-.top-top{
-    display:flex;
+.top-top {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: dodgerblue;
     width: 100%;
+    padding: 10px 20px;
 }
 
-#name-of-shop{
+#name-of-shop {
+    flex-grow: 1;
     text-align: center;
-    margin-right: 10px;
-    color:#fff;
+    color: #fff;
     line-height: 1.5;
-    font-family: 'Montserrat', sans-serif
-
-}
-#logo{
-    padding:20px;
-    width:5%;
-    height:5%;
+    font-family: 'Montserrat', sans-serif;
 }
 
+#logo {
+    flex: 0 0 60px;
+    height: 60px;
+}
 
-i{
-    padding:20px;
-    color:#fff;
-
+i {
+    color: #fff;
 }
 
 #search-form {
-    margin-left:20%;
-
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
 }
 
 #search-form input[type="text"] {
+    flex-grow: 1;
     padding: 10px;
     border: 2px solid orange;
     border-radius: 5px;
-    width:350px;
+    margin-right: 10px;
 }
 
 #search-form button {
-    padding: 5px 20px;
+    padding: 10px 20px;
     background-color: orange;
-    margin-left:10px;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #logo {
+        flex: 0 0 40px;
+        height: 40px;
+    }
+    #search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #search-form input[type="text"] {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    #search-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-top {
+        flex-wrap: wrap;
+    }
+    #name-of-shop {
+        order: 1;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #logo {
+        order: 0;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+    #search-form {
+        order: 2;
+        width: 100%;
+        padding: 0 10px;
+    }
 }
